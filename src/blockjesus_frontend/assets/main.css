@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f76b1a;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+}
+
+.box {
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container div:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.1);
+}
+
+.gameinfo {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 20px;
+  max-width: 300px;
+  margin: 0 auto; /* Centers the .gameinfo horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content horizontally in a flex container */
+  text-align: center; /* Centers the text inside each child element */
+}
+
+.gameinfo span {
+  color: #f76b1a;
+  border: 3px solid #333;
+  border-radius: 9px;
+  padding: 5px 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.gameinfo button {
+  padding: 10px 15px;
+  border-radius: 9px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gameinfo button:hover {
+  background-color: #f76b1a;
+}
+
+.gameinfo h1 {
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .gameContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+  }
+
+  .gameinfo h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "blockjesus_backend": {
+      "main": "src/blockjesus_backend/main.mo",
+      "type": "motoko"
+    },
+    "blockjesus_frontend": {
+      "dependencies": [
+        "blockjesus_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/blockjesus_frontend/src/index.html"
+      },
+      "source": [
+        "src/blockjesus_frontend/assets",
+        "dist/blockjesus_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
